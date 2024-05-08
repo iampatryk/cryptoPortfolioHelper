@@ -27,4 +27,5 @@ public class ConnectWithAPICoinGecko {
             throw new RuntimeException(e);
         }
     }
+
 }
