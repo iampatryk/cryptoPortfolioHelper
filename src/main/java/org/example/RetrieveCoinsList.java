@@ -16,19 +16,22 @@ public class RetrieveCoinsList {
     private final String filePathName = "coinListFile.txt";
     private final HttpClient client = HttpClient.newHttpClient();
 
-    public HttpResponse<String> RetrieveCoinsListAndSaveItInAFile() {
+    public void RetrieveCoinsListAndSaveItInAFile() {
         try {
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(addressURLToDownloadCoinsList))
-                    .header("accept", "application/json")
-                    .header("x-cg-pro-api-key", API.APIKEY)
-                    .method("GET", HttpRequest.BodyPublishers.noBody())
-                    .build();
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            if(!dataIsAlreadyExistsInFile()) {
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(addressURLToDownloadCoinsList))
+                        .header("accept", "application/json")
+                        .header("x-cg-pro-api-key", API.APIKEY)
+                        .method("GET", HttpRequest.BodyPublishers.noBody())
+                        .build();
+                HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            saveResponseToFile(response.body());
+                saveResponseToFile(response.body());
 
-            return response;
+            } else {
+                System.out.println("Files already exist");
+            }
 
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
@@ -43,5 +46,10 @@ public class RetrieveCoinsList {
         } catch (IOException e) {
             throw new RuntimeException("Error saving the file.", e);
         }
+    }
+
+    private boolean dataIsAlreadyExistsInFile() throws IOException {
+        Path filePath = Paths.get(filePathName);
+        return Files.exists(filePath) && Files.size(filePath) > 0;
     }
 }

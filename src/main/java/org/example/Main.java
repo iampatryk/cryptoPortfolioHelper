@@ -13,7 +13,8 @@ public class Main {
 
         // --- RetrieveCoinsList ---
         RetrieveCoinsList retrieveCoinsList  = new RetrieveCoinsList();
-        HttpResponse<String> response = retrieveCoinsList.RetrieveCoinsListAndSaveItInAFile();
+        retrieveCoinsList.RetrieveCoinsListAndSaveItInAFile();
+//        HttpResponse<String> response = retrieveCoinsList.RetrieveCoinsListAndSaveItInAFile();
 
 
 
