@@ -13,7 +13,7 @@ public class RetrieveCoinsList {
 
     private final KeyApi API = new KeyApi();
     private final String addressURLToDownloadCoinsList = "https://api.coingecko.com/api/v3/coins/list";
-    private final String filePathName = "coinListFile.txt";
+    public final String filePathName = "coinListFile.txt";
     private final HttpClient client = HttpClient.newHttpClient();
 
     public void RetrieveCoinsListAndSaveItInAFile() {
@@ -25,6 +25,7 @@ public class RetrieveCoinsList {
                         .header("x-cg-pro-api-key", API.APIKEY)
                         .method("GET", HttpRequest.BodyPublishers.noBody())
                         .build();
+
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
                 saveResponseToFile(response.body());
@@ -48,7 +49,7 @@ public class RetrieveCoinsList {
         }
     }
 
-    private boolean dataIsAlreadyExistsInFile() throws IOException {
+    public boolean dataIsAlreadyExistsInFile() throws IOException {
         Path filePath = Paths.get(filePathName);
         return Files.exists(filePath) && Files.size(filePath) > 0;
     }
