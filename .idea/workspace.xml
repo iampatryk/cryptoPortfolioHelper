@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="CoinsList check data already exists">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestRetrieveCoinsList.java" afterDir="false" />
+    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="CoinsList Tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestConnectWithAPICoinGecko.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.TestRetrieveCoinsList.testDataIsAlreadyExistsInFile.executor": "Run",
     "Gradle.TestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile.executor": "Run",
     "Gradle.TestRetrieveCoinsList.testSaveResponseToFile.executor": "Run",
     "Gradle.cryptoPortfolioHelper [:Main.main()].executor": "Run",
@@ -65,7 +65,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TestRetrieveCoinsList.testDataIsAlreadyExistsInFile">
+  <component name="RunManager" selected="Gradle.TestConnectWithAPICoinGecko.testCheckAPIServerStatus">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="cryptoPortfolioHelper.main" />
@@ -78,6 +78,30 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="TestConnectWithAPICoinGecko.testCheckAPIServerStatus" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestConnectWithAPICoinGecko.testCheckAPIServerStatus&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="TestRetrieveCoinsList.testDataIsAlreadyExistsInFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -153,10 +177,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestConnectWithAPICoinGecko.testCheckAPIServerStatus" />
         <item itemvalue="Gradle.TestRetrieveCoinsList.testDataIsAlreadyExistsInFile" />
         <item itemvalue="Gradle.TestRetrieveCoinsList.testSaveResponseToFile" />
         <item itemvalue="Gradle.TestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -203,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715358121924</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="CoinsList Tests">
+      <option name="closed" value="true" />
+      <created>1715501789697</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715501789697</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +246,7 @@
     <MESSAGE value="connect with API ( changes )" />
     <MESSAGE value="CoinsList" />
     <MESSAGE value="CoinsList check data already exists" />
-    <option name="LAST_COMMIT_MESSAGE" value="CoinsList check data already exists" />
+    <MESSAGE value="CoinsList Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="CoinsList Tests" />
   </component>
 </project>
