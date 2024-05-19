@@ -1,7 +1,5 @@
 package org.example;
 
-import java.net.http.HttpResponse;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -13,7 +11,7 @@ public class Main {
 
         // --- RetrieveCoinsList ---
         RetrieveCoinsList retrieveCoinsList  = new RetrieveCoinsList();
-        retrieveCoinsList.RetrieveCoinsListAndSaveItInAFile();
+        retrieveCoinsList.retrieveCoinsListAndSaveItInAFile();
 //        HttpResponse<String> response = retrieveCoinsList.RetrieveCoinsListAndSaveItInAFile();
 
 

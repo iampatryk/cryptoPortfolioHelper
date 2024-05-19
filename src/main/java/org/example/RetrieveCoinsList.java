@@ -16,9 +16,9 @@ public class RetrieveCoinsList {
     public final String filePathName = "coinListFile.txt";
     private final HttpClient client = HttpClient.newHttpClient();
 
-    public void RetrieveCoinsListAndSaveItInAFile() {
+    public void retrieveCoinsListAndSaveItInAFile() {
         try {
-            if(!dataIsAlreadyExistsInFile()) {
+            if(!dataAlreadyExistsinFile()) {
                 HttpRequest request = HttpRequest.newBuilder()
                         .uri(URI.create(addressURLToDownloadCoinsList))
                         .header("accept", "application/json")
@@ -31,7 +31,7 @@ public class RetrieveCoinsList {
                 saveResponseToFile(response.body());
 
             } else {
-                System.out.println("Files already exist");
+                System.out.println("Coins list is already downloaded");
             }
 
         } catch (IOException | InterruptedException e) {
@@ -39,7 +39,7 @@ public class RetrieveCoinsList {
         }
     }
 
-    public void saveResponseToFile(String responseCoins) {
+    private void saveResponseToFile(String responseCoins) {
         try {
             Path filePath = Paths.get(filePathName);
             Files.writeString(filePath, responseCoins);
@@ -49,7 +49,7 @@ public class RetrieveCoinsList {
         }
     }
 
-    public boolean dataIsAlreadyExistsInFile() throws IOException {
+    private boolean dataAlreadyExistsinFile() throws IOException {
         Path filePath = Paths.get(filePathName);
         return Files.exists(filePath) && Files.size(filePath) > 0;
     }
