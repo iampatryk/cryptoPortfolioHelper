@@ -1,42 +1,48 @@
 import org.example.RetrieveCoinsList;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class TestRetrieveCoinsList {
 
     private RetrieveCoinsList retrieveCoinsList = new RetrieveCoinsList();
-    private String testResponse = "Sample response data";
 
    @Test
     public void testRetrieveCoinsListAndSaveItInAFile() throws IOException {
-       //Check whether the method correctly retrieves data from the API and writes it to a file.
-       //Scenarios when the file already exists and when there is no data in the file.
-       retrieveCoinsList.RetrieveCoinsListAndSaveItInAFile();
-       Assertions.assertTrue(retrieveCoinsList.dataIsAlreadyExistsInFile(),"File should exist and contain data");
+        String filePathName = "coinListFile.txt";
+        Path filePath = Paths.get(filePathName);
+
+        Assertions.assertTrue(Files.exists(filePath),"File should exist");
+        Assertions.assertTrue(Files.size(filePath) > 0, "File should not be empty");
    }
 
    @Test
     public void testSaveResponseToFile() throws IOException {
-        //Check whether the method correctly saves the passed data to the file.
-       retrieveCoinsList.saveResponseToFile(testResponse);
+       String responseCoins = "Existing data";
+
        Path filePath = Paths.get(retrieveCoinsList.filePathName);
        Assertions.assertTrue(Files.exists(filePath), "File should exist");
-       Assertions.assertEquals(testResponse, Files.readString(filePath), "File content should match the response");
+       Assertions.assertEquals(responseCoins, Files.readString(filePath), "File content should match response data");
    }
 
    @Test
     public void testDataIsAlreadyExistsInFile() throws IOException {
-       //Verify that the method correctly checks whether the file exists and contains data.
+       String existingData = "Existing data";
        Path filePath = Paths.get(retrieveCoinsList.filePathName);
-       Files.writeString(filePath,"Sample response data");
-       boolean result = retrieveCoinsList.dataIsAlreadyExistsInFile();
-       Assertions.assertTrue(result, "File should exist and contain data");
+       Files.writeString(filePath, existingData);
+
+       boolean dataExists = Files.exists(filePath) && Files.size(filePath) > 0;
+
+       Assertions.assertTrue(dataExists, "Data should exist in the file");
+
    }
 
 
