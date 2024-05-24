@@ -1,5 +1,8 @@
 package org.example;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.TypeFactory;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -8,13 +11,18 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class RetrieveCoinsList {
 
     private final KeyApi API = new KeyApi();
+    private final Coin coinMapper = new Coin();
     private final String addressURLToDownloadCoinsList = "https://api.coingecko.com/api/v3/coins/list";
-    public final String filePathName = "coinListFile.txt";
+    private final String filePathName = "coinsListFile.txt";
     private final HttpClient client = HttpClient.newHttpClient();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     public void retrieveCoinsListAndSaveItInAFile() {
         try {
@@ -42,10 +50,29 @@ public class RetrieveCoinsList {
     private void saveResponseToFile(String responseCoins) {
         try {
             Path filePath = Paths.get(filePathName);
-            Files.writeString(filePath, responseCoins);
-            System.out.println("File written to " + filePath.toAbsolutePath());
+            Set<Coin> existingCoins = new HashSet<>();
+
+            if (Files.exists(filePath)) {
+                List<String> existingContent = Files.readAllLines(filePath);
+                if (!existingContent.isEmpty()) {
+                    String existingJson = String.join("", existingContent);
+                    List<Coin> existingCoinsList = objectMapper.readValue(existingJson, TypeFactory.defaultInstance().constructCollectionType(List.class, Coin.class));
+                    existingCoins.addAll(existingCoinsList);
+                }
+            }
+
+            List<Coin> newCoinsList = objectMapper.readValue(responseCoins, TypeFactory.defaultInstance().constructCollectionType(List.class, Coin.class));
+            Set<Coin> newCoins = new HashSet<>(newCoinsList);
+
+            newCoins.removeAll(existingCoins);
+            existingCoins.addAll(newCoins);
+
+            String updatedJson = objectMapper.writeValueAsString(existingCoins);
+            Files.writeString(filePath, updatedJson);
+            System.out.println("File updated at " + filePath.toAbsolutePath());
+
         } catch (IOException e) {
-            throw new RuntimeException("Error saving the file.", e);
+            throw new RuntimeException("Error updating the file.", e);
         }
     }
 
