@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="coin list code improvement">
+    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="coin list ( extending the method of writing to a file and starting the tests again )">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestRetrieveCoinsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRetrieveCoinsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Coin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,9 @@
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;iampatryk&quot;
   }
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: []
 }</component>
   <component name="GitLabMergeRequestsSettings">{}</component>
   <component name="GithubPullRequestsUISettings">{
@@ -218,7 +220,9 @@
       <workItem from="1715110839021" duration="1000" />
       <workItem from="1716147967469" duration="3757000" />
       <workItem from="1716472706195" duration="1047000" />
-      <workItem from="1716562815085" duration="1150000" />
+      <workItem from="1716562815085" duration="3977000" />
+      <workItem from="1716571833506" duration="78000" />
+      <workItem from="1716619423536" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="CoinsList">
       <option name="closed" value="true" />
@@ -268,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716149772462</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="coin list ( extending the method of writing to a file and starting the tests again )">
+      <option name="closed" value="true" />
+      <created>1716570174135</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716570174135</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +294,7 @@
     <MESSAGE value="CoinsList Tests" />
     <MESSAGE value="KeyAPI Test" />
     <MESSAGE value="coin list code improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="coin list code improvement" />
+    <MESSAGE value="coin list ( extending the method of writing to a file and starting the tests again )" />
+    <option name="LAST_COMMIT_MESSAGE" value="coin list ( extending the method of writing to a file and starting the tests again )" />
   </component>
 </project>
