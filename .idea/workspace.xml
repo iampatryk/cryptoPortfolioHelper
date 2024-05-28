@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="coin list ( added constructors )">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CoinsAPIHandler.java" afterDir="false" />
+    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="coin list ( separating methods into separate classes )">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/JSONMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConnectWithAPICoinGecko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConnectWithAPICoinGecko.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Coin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +236,7 @@
       <workItem from="1716571833506" duration="78000" />
       <workItem from="1716619423536" duration="338000" />
       <workItem from="1716911500694" duration="833000" />
-      <workItem from="1716914292901" duration="778000" />
+      <workItem from="1716914292901" duration="2148000" />
     </task>
     <task id="LOCAL-00001" summary="CoinsList">
       <option name="closed" value="true" />
@@ -303,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716914367945</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="coin list ( separating methods into separate classes )">
+      <option name="closed" value="true" />
+      <created>1716915191186</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716915191186</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +326,7 @@
     <MESSAGE value="coin list code improvement" />
     <MESSAGE value="coin list ( extending the method of writing to a file and starting the tests again )" />
     <MESSAGE value="coin list ( added constructors )" />
-    <option name="LAST_COMMIT_MESSAGE" value="coin list ( added constructors )" />
+    <MESSAGE value="coin list ( separating methods into separate classes )" />
+    <option name="LAST_COMMIT_MESSAGE" value="coin list ( separating methods into separate classes )" />
   </component>
 </project>

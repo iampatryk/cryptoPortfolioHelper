@@ -46,4 +46,13 @@ public class Coin {
     public int hashCode() {
         return Objects.hash(id, symbol, name);
     }
+
+    @Override
+    public String toString() {
+        return "Coin{" +
+                "id='" + id + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
