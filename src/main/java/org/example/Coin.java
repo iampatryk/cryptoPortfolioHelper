@@ -32,6 +32,8 @@ public class Coin {
         this.name = name;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
