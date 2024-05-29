@@ -8,6 +8,14 @@ public class Coin {
     public String symbol;
     public String name;
 
+    public Coin(){}
+
+    public Coin(String id, String symbol, String name) {
+        this.id = id;
+        this.symbol = symbol;
+        this.name = name;
+    }
+
     public String getId() {
         return id;
     }
