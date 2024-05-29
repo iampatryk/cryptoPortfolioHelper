@@ -50,5 +50,4 @@ public class CoinsAPIHandler {
         Path filePath = Paths.get(filePathName);
         return Files.exists(filePath) && Files.size(filePath) > 0;
     }
-
 }

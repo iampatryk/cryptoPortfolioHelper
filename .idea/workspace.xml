@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="coin list ( separating methods into separate classes )">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/JSONMapper.java" afterDir="false" />
+    <list default="true" id="dda3f6cc-416a-449e-9a6f-3cea487e05a2" name="Changes" comment="coin list ( Tests)">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TTestRetrieveCoinsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCoinAPIHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CoinsAPIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CoinsAPIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RetrieveCoinsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRetrieveCoinsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRetrieveCoinsList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,30 +73,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.TestConnectWithAPICoinGecko.testCheckAPIServerStatus.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestRetrieveCoinsList.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestRetrieveCoinsList.testDataIsAlreadyExistsInFile.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestRetrieveCoinsList.testRetrieveCoinsListWhenDataNotInFileThenSaveResponseToFile.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestRetrieveCoinsList.testSaveResponseToFile.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.cryptoPortfolioHelper [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#3 on coinList&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.TTestRetrieveCoinsList.executor": "Run",
+    "Gradle.TTestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile_dataDoesNotExist.executor": "Run",
+    "Gradle.TestCoinAPIHandler.testSaveResponseToFile.executor": "Run",
+    "Gradle.TestConnectWithAPICoinGecko.testCheckAPIServerStatus.executor": "Run",
+    "Gradle.TestRetrieveCoinsList.executor": "Run",
+    "Gradle.TestRetrieveCoinsList.testDataIsAlreadyExistsInFile.executor": "Run",
+    "Gradle.TestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile.executor": "Run",
+    "Gradle.TestRetrieveCoinsList.testRetrieveCoinsListWhenDataNotInFileThenSaveResponseToFile.executor": "Run",
+    "Gradle.TestRetrieveCoinsList.testSaveResponseToFile.executor": "Run",
+    "Gradle.cryptoPortfolioHelper [:Main.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "#3 on coinList",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
+}]]></component>
+  <component name="RunManager" selected="Gradle.TTestRetrieveCoinsList">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="cryptoPortfolioHelper.main" />
@@ -106,6 +112,78 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="TTestRetrieveCoinsList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TTestRetrieveCoinsList&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TTestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile_dataDoesNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TTestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile_dataDoesNotExist&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCoinAPIHandler.testSaveResponseToFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestCoinAPIHandler.testSaveResponseToFile&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="TestRetrieveCoinsList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -131,85 +209,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestRetrieveCoinsList.testDataIsAlreadyExistsInFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestRetrieveCoinsList.testDataIsAlreadyExistsInFile&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestRetrieveCoinsList.testSaveResponseToFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestRetrieveCoinsList.testSaveResponseToFile&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.TTestRetrieveCoinsList" />
+        <item itemvalue="Gradle.TTestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile_dataDoesNotExist" />
+        <item itemvalue="Gradle.TestCoinAPIHandler.testSaveResponseToFile" />
         <item itemvalue="Gradle.TestRetrieveCoinsList" />
-        <item itemvalue="Gradle.TestRetrieveCoinsList.testSaveResponseToFile" />
-        <item itemvalue="Gradle.TestRetrieveCoinsList.testDataIsAlreadyExistsInFile" />
-        <item itemvalue="Gradle.TestRetrieveCoinsList.testRetrieveCoinsListAndSaveItInAFile" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +242,7 @@
       <workItem from="1716571833506" duration="78000" />
       <workItem from="1716619423536" duration="338000" />
       <workItem from="1716911500694" duration="833000" />
-      <workItem from="1716914292901" duration="2148000" />
+      <workItem from="1716914292901" duration="5006000" />
     </task>
     <task id="LOCAL-00001" summary="CoinsList">
       <option name="closed" value="true" />
@@ -310,7 +316,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716915191186</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="coin list ( adding a class JSONMapper )">
+      <option name="closed" value="true" />
+      <created>1716916658589</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716916658590</updated>
+    </task>
+    <task id="LOCAL-00011" summary="coin list ( Tests)">
+      <option name="closed" value="true" />
+      <created>1716917671298</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716917671298</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +349,8 @@
     <MESSAGE value="coin list ( extending the method of writing to a file and starting the tests again )" />
     <MESSAGE value="coin list ( added constructors )" />
     <MESSAGE value="coin list ( separating methods into separate classes )" />
-    <option name="LAST_COMMIT_MESSAGE" value="coin list ( separating methods into separate classes )" />
+    <MESSAGE value="coin list ( adding a class JSONMapper )" />
+    <MESSAGE value="coin list ( Tests)" />
+    <option name="LAST_COMMIT_MESSAGE" value="coin list ( Tests)" />
   </component>
 </project>

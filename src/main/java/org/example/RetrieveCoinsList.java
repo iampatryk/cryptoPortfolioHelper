@@ -9,11 +9,11 @@ import java.net.http.HttpResponse;
 
 public class RetrieveCoinsList {
 
-    CoinsAPIHandler coinsAPIHandler = new CoinsAPIHandler();
+    public CoinsAPIHandler coinsAPIHandler = new CoinsAPIHandler();
 
     private final KeyApi API = new KeyApi();
     private final String addressURLToDownloadCoinsList = "https://api.coingecko.com/api/v3/coins/list";
-    private final HttpClient client = HttpClient.newHttpClient();
+    public HttpClient client = HttpClient.newHttpClient();
 
     public void retrieveCoinsListAndSaveItInAFile() {
         try {
