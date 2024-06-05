@@ -16,7 +16,6 @@ public class CoinsAPIHandler {
     private final String filePathName = "coinsListFile.txt";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-
     public void saveResponseToFile(String responseCoins) {
         try {
             Path filePath = Paths.get(filePathName);

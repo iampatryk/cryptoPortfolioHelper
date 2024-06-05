@@ -9,7 +9,6 @@ import java.net.http.HttpResponse;
 
 public class RetrieveCoinsList {
 
-
     private CoinsAPIHandler coinsAPIHandler;
 
     private final KeyApi API = new KeyApi();

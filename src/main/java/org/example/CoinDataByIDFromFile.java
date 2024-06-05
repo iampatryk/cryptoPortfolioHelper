@@ -11,7 +11,6 @@ import java.util.Scanner;
 
 public class CoinDataByIDFromFile {
 
-
     public void getCoinByIDFromFile() {
 
         ObjectMapper mapper = new ObjectMapper();

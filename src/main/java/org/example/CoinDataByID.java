@@ -13,9 +13,6 @@ public class CoinDataByID {
     private final String addressURLToGetCoinByID = "https://api.coingecko.com/api/v3/coins/";
     private final HttpClient client = HttpClient.newHttpClient();
 
-
-
-
     public HttpResponse<String> getCoinDataByID(String coinID) {
         try {
             HttpRequest request = HttpRequest.newBuilder(new URI(addressURLToGetCoinByID  + coinID))
