@@ -13,6 +13,7 @@ public class JSONPlaceholderFetcher {
 
     public Coin getCoinByID(String coinID) {
         HttpResponse<String> response = coinDataByID.getCoinDataByID(String.valueOf(coinID));
+        System.out.println(response.body());
         if(response.statusCode() == 200) {
             return JSONMapper.convertToJSON(response.body());
         } else {

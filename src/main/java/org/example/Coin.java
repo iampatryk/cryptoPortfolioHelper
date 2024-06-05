@@ -41,7 +41,6 @@ public class Coin {
     }
 
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -57,7 +56,7 @@ public class Coin {
 
     @Override
     public String toString() {
-        return "Coin{" +
+        return "Your Coin {" +
                 "id='" + id + '\'' +
                 ", symbol='" + symbol + '\'' +
                 ", name='" + name + '\'' +

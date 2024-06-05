@@ -9,7 +9,7 @@ import java.net.http.HttpResponse;
 public class ConnectWithAPICoinGecko {
 
     private final KeyApi API = new KeyApi();
-    private final RetrieveCoinsList serviceCoinGeckoAPI = new RetrieveCoinsList();
+//    private final RetrieveCoinsList serviceCoinGeckoAPI = new RetrieveCoinsList();
     private final String addressURLToConnectWithCoinGeckoApi = "https://api.coingecko.com/api/v3/ping?x_cg_demo_api_key=";
     private final HttpClient client = HttpClient.newHttpClient();
 

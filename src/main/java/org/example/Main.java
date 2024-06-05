@@ -15,8 +15,13 @@ public class Main {
 //        HttpResponse<String> response = retrieveCoinsList.RetrieveCoinsListAndSaveItInAFile();
 
         // --- Getting coin by ID ---
-        CoinDataByID coinDataByID = new CoinDataByID();
-        JSONPlaceholderFetcher jsonPlaceholderFetcher = new JSONPlaceholderFetcher(coinDataByID);
-        System.out.println(jsonPlaceholderFetcher.getCoinByID("eggdog"));
+//        CoinDataByID coinDataByID = new CoinDataByID();
+//        JSONPlaceholderFetcher jsonPlaceholderFetcher = new JSONPlaceholderFetcher(coinDataByID);
+//        System.out.println(jsonPlaceholderFetcher.getCoinByID("eggdog"));
+
+        // --- Getting coin by ID form FILE ---
+        CoinDataByIDFromFile coinDataByIDFromFile = new CoinDataByIDFromFile();
+        coinDataByIDFromFile.getCoinByIDFromFile();
+
     }
 }
