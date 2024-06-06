@@ -1,6 +1,7 @@
 package org.example;
 
 import java.net.http.HttpClient;
+import java.net.http.HttpResponse;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,6 +29,8 @@ public class Main {
         // --- Getting historical data coin by ID ---
             CoinHistoricalDataByID coinHistoricalDataByID = new CoinHistoricalDataByID();
             JSONPlaceholderFetcher jsonPlaceholderFetcher = new JSONPlaceholderFetcher();
-            System.out.println(jsonPlaceholderFetcher.getCoinHistoricalDataByIDJSON("chuck-on-eth"));
+//            System.out.println(jsonPlaceholderFetcher.getCoinHistoricalDataByIDJSON("chuck-on-eth","02-02-2022"));
+            HttpResponse<String> response = coinHistoricalDataByID.getCoinHistoricalDataByID("safeblast", "30-12-2020");
+            System.out.println(response.body());
     }
 }

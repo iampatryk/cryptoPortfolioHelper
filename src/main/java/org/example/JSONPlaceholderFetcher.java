@@ -22,8 +22,8 @@ public class JSONPlaceholderFetcher {
         }
     }
 
-    public Coin getCoinHistoricalDataByIDJSON(String coinID) throws RuntimeException {
-        HttpResponse<String> response = coinHistoricalDataByID.getCoinHistoricalDataByID(String.valueOf(coinID));
+    public Coin getCoinHistoricalDataByIDJSON(String coinID, String date) throws RuntimeException {
+        HttpResponse<String> response = coinHistoricalDataByID.getCoinHistoricalDataByID(String.valueOf(coinID),String.valueOf(date));
         System.out.println(response.body());
         if(response.statusCode() == 200) {
             return JSONMapper.convertToJSON(response.body());
