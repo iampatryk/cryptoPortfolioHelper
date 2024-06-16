@@ -30,7 +30,7 @@ public class Main {
             CoinHistoricalDataByID coinHistoricalDataByID = new CoinHistoricalDataByID();
             JSONPlaceholderFetcher jsonPlaceholderFetcher = new JSONPlaceholderFetcher();
 //            System.out.println(jsonPlaceholderFetcher.getCoinHistoricalDataByIDJSON("chuck-on-eth","02-02-2022"));
-            HttpResponse<String> response = coinHistoricalDataByID.getCoinHistoricalDataByID("safeblast", "30-12-2020");
+            HttpResponse<String> response = coinHistoricalDataByID.getCoinHistoricalDataByID("safeblast", "30-12-2023");
             System.out.println(response.body());
     }
 }

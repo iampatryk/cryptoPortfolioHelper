@@ -20,7 +20,7 @@ public class CoinHistoricalDataByID {
     public HttpResponse<String> getCoinHistoricalDataByID(String coinID, String date) {
         try {
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://api.coingecko.com/api/v3/coins/" + coinID  + "/history"))
+                    .uri(URI.create("https://api.coingecko.com/api/v3/coins/" + coinID  + "/history?date=" + date))
                     .header("accept", "application/json")
                     .header("x-cg-demo-api-key", API.APIKEY)
                     .method("GET", HttpRequest.BodyPublishers.noBody())
