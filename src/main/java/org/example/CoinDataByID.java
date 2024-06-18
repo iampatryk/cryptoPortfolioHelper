@@ -16,7 +16,6 @@ public class CoinDataByID {
     public HttpResponse<String> getCoinDataByID(String coinID) {
         try {
             HttpRequest request = HttpRequest.newBuilder(new URI(addressURLToGetCoinByID  + coinID))
-//                    .uri(URI.create("https://api.coingecko.com/api/v3/coins/id"))
                     .header("accept", "application/json")
                     .header("x-cg-demo-api-key", API.APIKEY)
                     .method("GET", HttpRequest.BodyPublishers.noBody())

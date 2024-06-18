@@ -1,5 +1,8 @@
 package org.example;
 
+import java.net.http.HttpClient;
+import java.net.http.HttpResponse;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -20,8 +23,14 @@ public class Main {
 //        System.out.println(jsonPlaceholderFetcher.getCoinByID("eggdog"));
 
         // --- Getting coin by ID form FILE ---
-        CoinDataByIDFromFile coinDataByIDFromFile = new CoinDataByIDFromFile();
-        coinDataByIDFromFile.getCoinByIDFromFile();
+//        CoinDataByIDFromFile coinDataByIDFromFile = new CoinDataByIDFromFile();
+//        coinDataByIDFromFile.getCoinByIDFromFile();
 
+        // --- Getting historical data coin by ID ---
+            CoinHistoricalDataByID coinHistoricalDataByID = new CoinHistoricalDataByID();
+            JSONPlaceholderFetcher jsonPlaceholderFetcher = new JSONPlaceholderFetcher();
+//            System.out.println(jsonPlaceholderFetcher.getCoinHistoricalDataByIDJSON("chuck-on-eth","02-02-2022"));
+            HttpResponse<String> response = coinHistoricalDataByID.getCoinHistoricalDataByID("safeblast", "30-12-2023");
+            System.out.println(response.body());
     }
 }

@@ -16,6 +16,7 @@ public class JSONMapper {
             coin.setId(node.get("id").textValue());
             coin.setName(node.get("name").textValue());
             coin.setSymbol(node.get("symbol").textValue());
+            coin.setDate(node.get("date").textValue());
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

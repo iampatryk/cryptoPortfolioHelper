@@ -7,13 +7,15 @@ public class Coin {
     public String id;
     public String symbol;
     public String name;
+    public String date;
 
     public Coin(){}
 
-    public Coin(String id, String symbol, String name) {
+    public Coin(String id, String symbol, String name, String date) {
         this.id = id;
         this.symbol = symbol;
         this.name = name;
+        this.date = date;
     }
 
     public String getId() {
@@ -40,26 +42,34 @@ public class Coin {
         this.name = name;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Coin that = (Coin) o;
-        return Objects.equals(id, that.id) && Objects.equals(symbol, that.symbol) && Objects.equals(name, that.name);
+        Coin coin = (Coin) o;
+        return Objects.equals(id, coin.id) && Objects.equals(symbol, coin.symbol) && Objects.equals(name, coin.name) && Objects.equals(date, coin.date);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, symbol, name);
+        return Objects.hash(id, symbol, name, date);
     }
 
     @Override
     public String toString() {
-        return "Your Coin {" +
+        return "Coin{" +
                 "id='" + id + '\'' +
                 ", symbol='" + symbol + '\'' +
                 ", name='" + name + '\'' +
+                ", date='" + date + '\'' +
                 '}';
     }
 }
